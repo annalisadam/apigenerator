@@ -5,29 +5,20 @@
     </head>
     <body>
         <?php
-        $myString = "pepe";
-        $myInteger = 12;
-        $myFloat = 34.23;
-        $myBoolean = true;
-        //$myArray = array(2,3,4,5,77,"2323",null);
-        $myArray = array (
-            name=>"pepe",
-            lastname =>"pippo",
-            name => "tttt"
-            );
-        $myFirstNull = NULL;
-        //$myObject = new Object();
-          print(myArray);
-      
-        if($myBoolean ==true)
-        {
-            if($myString!== 'pepe')
-        
-        
-        
-         for($i = 0; $i<4;$i++){
-            echo "<p>hello world</p> \n";
-        }
+       
+        ini_set('display_errors',1);
+        ini_set('display_startup_errors',1);
+         error_reporting(E_ALL);
+         
+    if(is_integer(parse_str('23')))
+    {
+        echo"yes";
+    }
+    else 
+    {
+        echo "no";
+    }
+    
         ?>
     </body>
 </html>
