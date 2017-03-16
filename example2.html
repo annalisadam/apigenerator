@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <script
+  src="https://code.jquery.com/jquery-3.2.0.min.js"
+  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script>
+            $( document ).ready(function(){
+
+   var requestURL = "https://apigenerator-alesanchezr.c9users.io/";
+    
+    $.ajax({
+      method: "POST",
+      url: requestURL,
+      success: mySuccessListener,
+     error: myFailureListener,
+    });
+    
+});
+
+function mySuccessListener(data)
+{
+    alert('success');
+}
+
+function myFailureListener(data)
+{
+    alert('error');
+}
+       </script>
+  
+    </body>
+</html> 
