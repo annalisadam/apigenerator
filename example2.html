@@ -6,6 +6,18 @@
   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
   crossorigin="anonymous"></script>
     </head>
+    <form action="https://apigenerator-alesanchezr.c9users.io/">
+  First name:<br>
+  <input type="text" name="firstname" value="">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="">
+  <br><br>
+  Gender:<br>
+  <input type="text" name="gender" value="">
+  <br>
+  <input type="submit" value="Submit">
+</form>
     <body>
         <script>
             $( document ).ready(function(){
@@ -13,10 +25,16 @@
    var requestURL = "https://apigenerator-alesanchezr.c9users.io/";
     
     $.ajax({
-      method: "POST",
+      method: "GET",
       url: requestURL,
       success: mySuccessListener,
      error: myFailureListener,
+     datatype : 'text',
+     data:{
+         name:'Ignacio',
+        lastname:'Freddo',
+        age : '29'
+     }
     });
     
 });
