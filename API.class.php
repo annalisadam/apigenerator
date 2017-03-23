@@ -1,15 +1,14 @@
 <?php
+
+require_once('API.class.php');
+
 /**
- * This class will handle all the logic for our API
+ * Here I'm creating a new Portfolio object and then
+ * calling the "fakeIt" function of that particular Portfolio instance.
+ * 
  */
-class API
-{
-    function __construct(){
-        
-    }
-    
-    function getVariable()
-    {
-        $_GET['id']
-    }
-}
+    $api = new API();
+    //$api->fakeDatabaseValues();
+    $api->identifyRequest($_GET);
+    $api->performRequest();
+    $api->returnRequest('JSON');
